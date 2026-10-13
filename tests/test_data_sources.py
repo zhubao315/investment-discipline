@@ -10,10 +10,17 @@
 """
 from __future__ import annotations
 
+import io
+import json
 import os
+import contextlib
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+
+# 让测试自带隔离缓存目录：不依赖、也不污染用户缓存（CI 上尤其重要）
+os.environ["INVESTMENT_DISCIPLINE_CACHE"] = tempfile.mkdtemp(prefix="inv-disc-cache-")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
@@ -78,11 +85,17 @@ class TestMacroAndFilings(unittest.TestCase):
 
 
 class TestOfflineDegradation(unittest.TestCase):
-    """即使离线，工具也应优雅返回 error 而不是抛未捕获异常。"""
+    """即使离线且无缓存，命令行也应优雅返回结构化错误（退出码 3），而不是抛未捕获异常。"""
 
-    def test_offline_flag_yields_structured_error(self):
-        res = md.get_quote(["600519"], offline=True)
-        self.assertIn("status", res)
+    def test_offline_without_cache_returns_structured_error(self):
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = md.main(["quote", "600519", "--offline"])
+        self.assertEqual(rc, 3, "离线且无缓存应返回退出码 3")
+        payload = json.loads(buf.getvalue())
+        self.assertEqual(payload.get("status"), "unavailable")
+        self.assertIn("error", payload)
+        self.assertTrue(payload.get("note"))
 
 
 if __name__ == "__main__":
