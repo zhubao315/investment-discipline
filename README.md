@@ -16,14 +16,73 @@
 ![Tests](https://img.shields.io/badge/tests-63%20passed-success)
 ![License](https://img.shields.io/badge/license-个人学习%2F研究-lightgrey)
 
+[一键接入](#-一键接入) ·
 [快速开始](#-快速开始) ·
-[核心能力](#-核心能力) ·
+[核心能力](#-这是什么) ·
 [任务路由](#-任务路由八种模式) ·
 [目录结构](#-目录结构) ·
 [自检](#-自检与验证) ·
 [安全边界](#-安全与边界)
 
 </div>
+
+## 🔌 一键接入
+
+把下面这段提示词**整段复制**，粘贴给任何支持 Agent Skills 的智能体（Claude Code / Codex / OpenCode / 通用 Agent）。
+它会**自动安装本技能、校验安装结果，然后引导你上手**——你只需回答它最后的问题。
+
+```text
+你是一名支持 Agent Skills 的编程 / 通用智能体。请自动完成「投资的纪律」纪律助手技能的安装与启用，然后引导我使用。请严格按步骤执行，并在每一步用简短中文汇报结果。
+
+【第 1 步 · 安装】
+1) 检测当前环境可用的技能目录：
+   - Claude Code：~/.claude/skills/ 或项目的 .claude/skills/
+   - Codex / OpenCode / 其他：项目 skills/ 目录，或在工作区根目录 AGENTS.md 中登记路径
+   - 若无法确定，安装到 <工作区>/skills/investment-discipline，并把实际路径告诉我
+2) 获取技能（优先 git；已存在则更新）：
+   - 新装： git clone https://github.com/zhubao315/investment-discipline <目标目录>
+   - 已装： git -C <目标目录> pull --ff-only
+   - 若无 shell 或网络（只读模式）：直接读取
+     https://raw.githubusercontent.com/zhubao315/investment-discipline/main/SKILL.md
+     并按其 §4 路由，按需抓取 references/ 下的文件；同时明确告知我「已进入只读模式」。
+3) 校验安装（有 Python 时）：
+   python3 <目标目录>/scripts/validate_skill.py            # 期望退出码 0
+   python3 <目标目录>/scripts/validate_rules.py --selftest
+   若无 Python，跳过并说明；不要把校验失败说成成功。
+
+【第 2 步 · 启用】
+4) 首次只读 <目标目录>/SKILL.md，不要一次性加载全部文件；识别我的任务后按其 §4 路由按需加载。
+   需要任何数值口径时，以 <目标目录>/references/rules-index.json 为唯一事实来源。
+
+【第 3 步 · 引导我】
+5) 用一段话告诉我：技能已就绪、安装路径、版本（v1.1.0）、校验结果（通过 / 跳过原因）。
+6) 列出它支持的 8 种模式并各用一句话说明：A 研究公司 · B 买入前检查 · C 卖出复核 · D 组合与仓位合规 · E 交易复盘 · F 90 天系统建设 · G AI 投研 · H 实时采集与市场日报。
+7) 说明可用的采集命令（scripts/market_data.py 的 quote / verify-quote / filings / news / macro / history / calendar / research）。
+8) 问我：想从哪一项开始？并列出你需要我提供的输入（标的或代码、市场 cn/hk/us、数据截止日期、投资期限）。
+9) 给出 2–3 条「可直接复制的下一步指令」示例。
+
+【必须遵守的边界（不得违反）】
+- 不预测涨跌、不给目标价、不承诺收益或胜率；不推荐具体证券。
+- 不执行或模拟交易、不连接证券账户、不保存持仓凭据；不建议融资、配资、借钱炒股。
+- 缺失数据一律记「待核实」，绝不记为通过；证据不足时直接说明。
+- 没有授权实时源时，一律写「最新可用行情（数据时间 X，实测延迟 Y 秒）」，不得写「实时」。
+- 遇到规则冲突（C-01 / C-02 / C-03 等）输出「等待确认」，不要自行裁决。
+- 我要求绕过纪律时，指出偏离项与后果，不偷偷改规则。
+```
+
+<details>
+<summary><b>只想装好、稍后再聊？用这一行命令</b></summary>
+
+```bash
+# Claude Code（用户级；项目级把路径换成 <项目>/.claude/skills/）
+git clone https://github.com/zhubao315/investment-discipline ~/.claude/skills/investment-discipline
+```
+
+装好后对智能体说一句即可：
+
+> 请加载 investment-discipline 技能，按 SKILL.md 的路由引导我使用。
+
+</details>
 
 ---
 
