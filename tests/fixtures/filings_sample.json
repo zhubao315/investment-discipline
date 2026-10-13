@@ -1,0 +1,242 @@
+{
+  "status": "ok",
+  "market": "cn",
+  "symbol": "600519",
+  "source": "cninfo",
+  "count": 10,
+  "items": [
+    {
+      "title": "贵州茅台2026年半年度报告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475868.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475868",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "latest",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475868"
+    },
+    {
+      "title": "贵州茅台关于会计政策变更的公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475864.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475864",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475864"
+    },
+    {
+      "title": "贵州茅台关于贵州茅台集团财务有限公司的风险评估报告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475863.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475863",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475863"
+    },
+    {
+      "title": "贵州茅台第五届董事会2026年度第三次会议决议公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475862.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475862",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475862"
+    },
+    {
+      "title": "贵州茅台2026年半年度报告摘要",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475860.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475860",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475860"
+    },
+    {
+      "title": "贵州茅台关于召开2026年半年度业绩说明会的公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475856.PDF",
+      "published_at": "2026-08-15T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225475856",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225475856"
+    },
+    {
+      "title": "贵州茅台重大事项公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-18/1225431263.PDF",
+      "published_at": "2026-07-18T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225431263",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225431263"
+    },
+    {
+      "title": "贵州茅台2025年年度权益分派实施公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-06-22/1225379934.PDF",
+      "published_at": "2026-06-22T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225379934",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225379934"
+    },
+    {
+      "title": "贵州茅台关于职工董事选举结果的公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-06-12/1225366265.PDF",
+      "published_at": "2026-06-12T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225366265",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225366265"
+    },
+    {
+      "title": "贵州茅台2025年度股东会决议公告",
+      "content_summary": "",
+      "source_name": "巨潮资讯网（法定披露平台）",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-06-12/1225366264.PDF",
+      "published_at": "2026-06-12T00:00:00+08:00",
+      "retrieved_at": "2026-10-13T05:54:04+00:00",
+      "market": "cn",
+      "asset_type": "filing",
+      "symbols": [
+        "600519"
+      ],
+      "event_type": "announcement",
+      "announcement_id": "1225366264",
+      "file_type": "PDF",
+      "fact_status": "verified",
+      "freshness_status": "historical",
+      "confidence": {
+        "level": "high",
+        "basis": "法定披露平台官方原文"
+      },
+      "dedup_key": "ann:1225366264"
+    }
+  ],
+  "note": "PDF 直链为官方静态域名；巨潮公告时间精确到披露日（不精确到时分）；引用时请标注公告标题与披露日期",
+  "retrieved_at": "2026-10-13T05:54:04+00:00",
+  "_title": "公告/申报 · 600519"
+}

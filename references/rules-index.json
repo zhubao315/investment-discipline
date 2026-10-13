@@ -1,0 +1,367 @@
+{
+  "book": "投资的纪律",
+  "subtitle": "从情绪交易到纪律复利",
+  "author": "朱宝",
+  "source_note": "由 build_skill_references.py 从书稿素材生成，引文已回源断言",
+  "count": 18,
+  "rules": [
+    {
+      "rule_id": "R-POS-01",
+      "rule_name": "单只个股仓位上限",
+      "rule_value": "≤20%；初始建仓≤10%；上涨被动超25%必须减仓",
+      "unit": "占总资产百分比",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 单只个股上限",
+      "rule_type": "硬性约束",
+      "effective_scope": "全部账户、全部标的",
+      "notes": "被动超限同样适用，无需主观判断即执行减仓",
+      "quote": "上涨被动超25%必须减仓"
+    },
+    {
+      "rule_id": "R-POS-02",
+      "rule_name": "单行业仓位上限",
+      "rule_value": "≤30%；银行/保险/券商合并按大金融计为一家",
+      "unit": "占总资产百分比",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 单行业上限",
+      "rule_type": "硬性约束",
+      "effective_scope": "行业分类需注明口径",
+      "notes": "大金融合并计，不做伪分散",
+      "quote": "银行保险券商视为同一大金融，不做伪分散"
+    },
+    {
+      "rule_id": "R-POS-03",
+      "rule_name": "现金比例下限",
+      "rule_value": "≥15%；极端高估提至30%-40%；极端低估可降至10%",
+      "unit": "占总资产百分比",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 现金下限",
+      "rule_type": "硬性约束",
+      "effective_scope": "常规期15%-20%；极端区间按估值分位切换",
+      "notes": "破15%当周补回；现金是看涨期权，永不满仓",
+      "quote": "现金是看涨期权，永不满仓"
+    },
+    {
+      "rule_id": "R-POS-04",
+      "rule_name": "持股数量区间",
+      "rule_value": "8-12只；核心5-8只占70%-80%；卫星3-5只",
+      "unit": "只数与仓位占比",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 持股数量",
+      "rule_type": "硬性约束",
+      "effective_scope": "股票多头组合",
+      "notes": "<8或>12只即调整；每只必须一句话说清买入理由",
+      "quote": "每只必须一句话说清买入理由"
+    },
+    {
+      "rule_id": "R-POS-05",
+      "rule_name": "单次配置方案调整幅度",
+      "rule_value": "单次≤10个百分点，分3-6个月完成",
+      "unit": "百分点 / 月",
+      "source_file": "_content/ch02.md",
+      "source_section": "清单与数据 · 一页速查硬阈值",
+      "rule_type": "硬性约束",
+      "effective_scope": "再配置（非再平衡）时适用",
+      "notes": "防止一次性调仓把交易成本与择时风险拉满",
+      "quote": "单次方案调整 | ≤10 个百分点，分 3-6 个月"
+    },
+    {
+      "rule_id": "R-POS-06",
+      "rule_name": "股债基准公式",
+      "rule_value": "股票基准 = 100 − 年龄，±10 个百分点",
+      "unit": "百分比",
+      "source_file": "_content/ch02.md",
+      "source_section": "清单与数据 · 一页速查硬阈值",
+      "rule_type": "建议",
+      "effective_scope": "生命周期配置的起点，再按风险承受度与期限修正",
+      "notes": "生命周期表与个人四要素优先于公式",
+      "quote": "股票基准公式 | 100−年龄，±10 个百分点"
+    },
+    {
+      "rule_id": "R-POS-07",
+      "rule_name": "三型回撤上限（压力测试判定线）",
+      "rule_value": "保守<10%；平衡<25%；激进<40%",
+      "unit": "组合回撤百分比",
+      "source_file": "_content/ch02.md",
+      "source_section": "清单与数据 · 一页速查硬阈值",
+      "rule_type": "检查条件",
+      "effective_scope": "选方案前与市场剧变后做压力测试",
+      "notes": "判定：冲击<方案回撤上限 且 <个人承受上限，才允许维持仓位",
+      "quote": "压力测试判定 | 冲击 <方案回撤上限，且 <个人承受上限"
+    },
+    {
+      "rule_id": "R-RISK-01",
+      "rule_name": "杠杆",
+      "rule_value": "零；不融资不配资；唯一可接受长期负债是房贷",
+      "unit": "—",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 杠杆",
+      "rule_type": "硬性约束",
+      "effective_scope": "全部账户",
+      "notes": "任何融资配资即清零；不用期权做裸卖空",
+      "quote": "唯一可接受长期负债是房贷"
+    },
+    {
+      "rule_id": "R-RISK-02",
+      "rule_name": "三档硬止损",
+      "rule_value": "短线5%-8%；中线10%-15%；长线20%-25%；买入前设定",
+      "unit": "亏损百分比",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 硬止损",
+      "rule_type": "硬性约束",
+      "effective_scope": "按持有周期定档，买入前写入记录",
+      "notes": "触发无条件执行；短线中线触发当日执行，长线不迟于次日；卖后冷静48小时",
+      "quote": "触发无条件执行，冷静48小时"
+    },
+    {
+      "rule_id": "R-RISK-03",
+      "rule_name": "再平衡触发与频率",
+      "rule_value": "每季度检查；单类偏离目标>5个百分点即执行；每年至少执行1次",
+      "unit": "百分点 / 季度",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 再平衡",
+      "rule_type": "硬性约束",
+      "effective_scope": "所有配置组合",
+      "notes": "本质是纪律化的卖高买低；全年执行0次属危险信号",
+      "quote": "本质是纪律化的卖高买低"
+    },
+    {
+      "rule_id": "R-RISK-04",
+      "rule_name": "风险三层与检查频率",
+      "rule_value": "波动率每日看仓位；永久性损失每周看安全边际；机会成本每月看组合审视",
+      "unit": "日 / 周 / 月",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "五、全书统一口径 · 风险三层",
+      "rule_type": "检查条件",
+      "effective_scope": "个人化 SOP 的频率表骨架",
+      "notes": "波动率三档：日波动<1%低、1%-3%中、>3%高（基准×50%或回避）",
+      "quote": "波动率看仓位，永久损失看安全边际，机会成本看月度审视"
+    },
+    {
+      "rule_id": "R-VAL-01",
+      "rule_name": "安全边际底线",
+      "rule_value": "常规>30%才买；牛市情境上浮至>40%；10%-30%只进观察清单",
+      "unit": "百分比",
+      "source_file": "_content/ch05.md",
+      "source_section": "核心观点 / 关键机制 · 安全边际",
+      "rule_type": "硬性约束",
+      "effective_scope": "全书统一估值底线；分行业底线一律>30%（周期40%-50%）",
+      "notes": "安全边际=（内在价值下限−现价）÷内在价值下限",
+      "quote": "安全边际不足 30%，你的判断一文不值"
+    },
+    {
+      "rule_id": "R-VAL-02",
+      "rule_name": "估值三档分位",
+      "rule_value": "低估：PE历史分位<25%且PEG<0.8且安全边际>30%；合理：25%-75%分位；高估：>75%分位",
+      "unit": "历史分位百分比",
+      "source_file": "_content/ch05.md",
+      "source_section": "核心观点 · 三档必须带数字",
+      "rule_type": "检查条件",
+      "effective_scope": "个股与指数估值分档",
+      "notes": "至少2种估值方法交叉验证，拒绝形容词",
+      "quote": "低估、合理、高估用 PE 历史分位 25%、75%"
+    },
+    {
+      "rule_id": "R-BUY-01",
+      "rule_name": "买入清单灯色上限",
+      "rule_value": "红灯必须0个；黄灯≤2个（买入与持有均适用）；黄灯≥3个启动卖出评估",
+      "unit": "个数",
+      "source_file": "_content/ch06.md",
+      "source_section": "关键机制 · 三档评分与决策规则",
+      "rule_type": "硬性约束",
+      "effective_scope": "25项逐项打分",
+      "notes": "缺失数据记『待核实』，不得记为通过",
+      "quote": "持有：红灯 0 个，黄灯≤2 个；黄灯≥3 个启动卖出评估"
+    },
+    {
+      "rule_id": "R-BUY-02",
+      "rule_name": "买入清单完整性",
+      "rule_value": "25项全部逐项过，1项未过则不买",
+      "unit": "项数",
+      "source_file": "_content/ch06.md",
+      "source_section": "核心观点 · 25项全过才放行",
+      "rule_type": "硬性约束",
+      "effective_scope": "每次下单",
+      "notes": "工作记忆只有7±2项，所以必须逐项扫过、遗漏0项",
+      "quote": "25 项全过才放行"
+    },
+    {
+      "rule_id": "R-SELL-01",
+      "rule_name": "卖出触发计数",
+      "rule_value": "S1-S12触发≥2项执行卖出；=1项进观察期并写复查日",
+      "unit": "项数",
+      "source_file": "_content/ch06.md",
+      "source_section": "核心观点 · 卖出按计数执行",
+      "rule_type": "硬性约束",
+      "effective_scope": "持仓期间逐项复核",
+      "notes": "避免单一信号误判；缺失数据不得计为未触发",
+      "quote": "卖出按计数执行"
+    },
+    {
+      "rule_id": "R-SELL-02",
+      "rule_name": "硬止损项的执行时效",
+      "rule_value": "S11硬止损触发，当日收盘前完成",
+      "unit": "时限",
+      "source_file": "_content/ch06.md",
+      "source_section": "关键机制 · 卖出执行四步",
+      "rule_type": "硬性约束",
+      "effective_scope": "止损触发当日",
+      "notes": "不做『再等等』；卖出后冷静48小时再定资金去向",
+      "quote": "若为 S11 硬止损，当日收盘前完成"
+    },
+    {
+      "rule_id": "R-PLAN-01",
+      "rule_name": "90天四阶段节奏",
+      "rule_value": "定盘D1-7；选股D8-45（20进6进3）；决策D46-50（2笔买入归档）；运行D51-90（首份月度复盘）",
+      "unit": "天",
+      "source_file": "_content/appendix-90days.md",
+      "source_section": "四、90 天落地节奏",
+      "rule_type": "计划",
+      "effective_scope": "个人投资系统从0到1的建设期",
+      "notes": "D91-180按同一漏斗把持股补至8-12只；不承诺90天内盈利",
+      "quote": "运行 | 第51-90天"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C-01",
+      "rule_id": "R-RISK-03",
+      "severity": "边界冲突",
+      "title": "再平衡触发：≥5 个百分点 vs >5 个百分点",
+      "side_a": {
+        "text": "再平衡：偏离目标 ≥ 5 个百分点即执行",
+        "sources": [
+          "_content/appendix-90days.md（每周/每季度频率表）",
+          "_content/appendix-90days.md（第 4 步、第 91-180 天段）",
+          "_content/ch06.md（速查表勾选项：偏离<5 个百分点不操作）",
+          "_content/ch07.md（季度频率表）",
+          "_content/ch08.md（第4步/速查表）"
+        ]
+      },
+      "side_b": {
+        "text": "单类偏离 >5 个百分点即执行 / 偏离 >5pp 执行",
+        "sources": [
+          "_content/ch02.md（阈值触发行：单类偏离 >5 个百分点即执行）",
+          "_content/ch02.md（混合法：每季度查，偏离 >5pp 执行，否则不动）"
+        ]
+      },
+      "boundary": "偏离恰好等于 5.0 个百分点时",
+      "engine_behavior": "输出『规则冲突，等待确认』，不执行任何自动判定；>5pp 时两种读法结论一致（执行），照常判定。",
+      "resolution_required": "作者确认等于 5pp 时执行与否；确认后更新 ch02 或其余五处，并同步 rules-index。",
+      "status": "open"
+    },
+    {
+      "id": "C-02",
+      "rule_id": "R-VAL-01 / R-BUY-02（V4）",
+      "severity": "阈值不一致",
+      "title": "安全边际底线：>30%（全书硬底线） vs ≥20%（买入清单 V4 通过标准）",
+      "side_a": {
+        "text": "安全边际>30% 才买；10%-30% 只进观察清单；不足 30% 判断一文不值",
+        "sources": [
+          "_content/ch05.md（核心观点/三档/分行业底线）",
+          "references/rules-index.json R-VAL-01"
+        ]
+      },
+      "side_b": {
+        "text": "V4 安全边际：最悲观假设下估值仍有 20% 以上的安全边际 → 通过",
+        "sources": [
+          "_content/ch06.md（估值维度 V4）"
+        ]
+      },
+      "boundary": "安全边际落在 20%-30% 区间时：V4 判通过，R-VAL-01 判『只可进观察清单』",
+      "engine_behavior": "按更严格且为硬性约束的 R-VAL-01 处理（>30% 才允许进入买入放行判断），同时把 V4 的 20% 口径标为需要关注并附本冲突编号，等待作者裁决。",
+      "resolution_required": "作者确认 V4 是否统一为 >30%，或明确『最悲观假设下 20%』为独立维度并说明适用条件。",
+      "status": "open"
+    },
+    {
+      "id": "C-03",
+      "rule_id": "R-SELL-02 / R-RISK-02",
+      "severity": "执行时效表述不一致",
+      "title": "S11 硬止损执行时效：当日收盘前 vs 长线不迟于次日",
+      "side_a": {
+        "text": "若为 S11 硬止损，当日收盘前完成，不做「再等等」",
+        "sources": [
+          "_content/ch06.md（卖出执行四步）"
+        ]
+      },
+      "side_b": {
+        "text": "短线/中线 触发当日执行；长线 触发后不迟于次日",
+        "sources": [
+          "_content/ch07.md（四止损·百分比止损表）"
+        ]
+      },
+      "boundary": "长线持仓触发 S11 时：当日收盘前 还是 不迟于次日",
+      "engine_behavior": "两者都指向『必须执行、不可拖延』，引擎按更严格的『当日收盘前』提示，并标注本冲突编号；不把『次日』当作可拖延的许可。",
+      "resolution_required": "作者确认长线止损的统一执行时效表述。",
+      "status": "open"
+    }
+  ],
+  "chapter_map": [
+    {
+      "reference": "investment-philosophy.md",
+      "chapter": "ch01",
+      "theme": "投资哲学：不预测的纪律",
+      "url": "/chapters/ch01.html"
+    },
+    {
+      "reference": "asset-allocation.md",
+      "chapter": "ch02",
+      "theme": "资产配置：战略定仓位",
+      "url": "/chapters/ch02.html"
+    },
+    {
+      "reference": "industry-analysis.md",
+      "chapter": "ch03",
+      "theme": "行业：先选行",
+      "url": "/chapters/ch03.html"
+    },
+    {
+      "reference": "financial-analysis.md",
+      "chapter": "ch04",
+      "theme": "财报：读懂三张表",
+      "url": "/chapters/ch04.html"
+    },
+    {
+      "reference": "valuation.md",
+      "chapter": "ch05",
+      "theme": "估值：安全边际",
+      "url": "/chapters/ch05.html"
+    },
+    {
+      "reference": "buy-checklist.md / sell-checklist.md",
+      "chapter": "ch06",
+      "theme": "决策清单：全书之眼",
+      "url": "/chapters/ch06.html"
+    },
+    {
+      "reference": "risk-management.md",
+      "chapter": "ch07",
+      "theme": "风控：三层风险",
+      "url": "/chapters/ch07.html"
+    },
+    {
+      "reference": "investor-psychology.md",
+      "chapter": "ch08",
+      "theme": "心理：偏差与冷静期",
+      "url": "/chapters/ch08.html"
+    },
+    {
+      "reference": "review-workflow.md",
+      "chapter": "ch09",
+      "theme": "复盘：原则生产线",
+      "url": "/chapters/ch09.html"
+    },
+    {
+      "reference": "ai-research.md",
+      "chapter": "ch10",
+      "theme": "AI投研：三层架构",
+      "url": "/chapters/ch10.html"
+    },
+    {
+      "reference": "practical-workflow.md",
+      "chapter": "ch11",
+      "theme": "实战：90天全流程",
+      "url": "/chapters/ch11.html"
+    }
+  ]
+}

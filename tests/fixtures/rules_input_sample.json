@@ -1,0 +1,41 @@
+{
+  "as_of": "2026-10-13T16:00:00+08:00",
+  "total_assets": 1000000,
+  "cash": 150000,
+  "leverage": 0,
+  "valuation_regime": "normal",
+  "positions": [
+    {"symbol": "600519", "name": "贵州茅台", "industry": "白酒", "market_value": 120000, "horizon": "long", "stop_loss_pct": 22},
+    {"symbol": "00700", "name": "腾讯控股", "industry": "互联网", "market_value": 90000, "horizon": "long", "stop_loss_pct": 25},
+    {"symbol": "AAPL", "name": "Apple", "industry": "消费电子", "market_value": 80000, "horizon": "mid", "stop_loss_pct": 12},
+    {"symbol": "000001", "name": "平安银行", "industry": "银行", "market_value": 70000, "horizon": "long", "stop_loss_pct": 20},
+    {"symbol": "601318", "name": "中国平安", "industry": "保险", "market_value": 60000, "horizon": "long", "stop_loss_pct": 20},
+    {"symbol": "600036", "name": "招商银行", "industry": "银行", "market_value": 50000, "horizon": "long", "stop_loss_pct": 20},
+    {"symbol": "300750", "name": "宁德时代", "industry": "电池", "market_value": 45000, "horizon": "mid", "stop_loss_pct": 10},
+    {"symbol": "000858", "name": "五粮液", "industry": "白酒", "market_value": 40000, "horizon": "long", "stop_loss_pct": 20},
+    {"symbol": "600900", "name": "长江电力", "industry": "电力", "market_value": 35000, "horizon": "long", "stop_loss_pct": 20},
+    {"symbol": "601899", "name": "紫金矿业", "industry": "有色", "market_value": 30000, "horizon": "mid", "stop_loss_pct": 10}
+  ],
+  "asset_classes": [
+    {"class": "A股", "target_pct": 60, "actual_pct": 65},
+    {"class": "美股", "target_pct": 15, "actual_pct": 20.1},
+    {"class": "现金", "target_pct": 15, "actual_pct": 15}
+  ],
+  "risk_type": "保守",
+  "stress_drawdown_pct": 12,
+  "market_state": "normal",
+  "buy_candidate": {
+    "symbol": "601899",
+    "name": "紫金矿业",
+    "red_lights": 0,
+    "yellow_lights": 1,
+    "verified_items": 25,
+    "total_items": 25,
+    "price": 19.8,
+    "intrinsic_value_low": 27.5
+  },
+  "sell_review": {
+    "symbol": "300750",
+    "triggers": {"S1": "triggered", "S3": "待核实", "S11": "not_triggered"}
+  }
+}

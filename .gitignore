@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行时缓存（工具默认写用户缓存目录，此处兜底）
+.cache/
+cache/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
