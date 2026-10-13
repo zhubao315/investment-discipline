@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 校验与测试 (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+
+    steps:
+      - name: 检出
+        uses: actions/checkout@v4
+
+      - name: 安装 Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Skill 结构 / 链接 / 规则一致性校验
+        run: python3 scripts/validate_skill.py
+
+      - name: 规则引擎边界自测
+        run: python3 scripts/validate_rules.py --selftest
+
+      - name: 规则冲突报告
+        run: python3 scripts/validate_rules.py --conflicts
+
+      - name: 数据校验器自测
+        run: python3 scripts/validate_data.py --selftest
+
+      - name: 单元测试（离线）
+        run: NO_NETWORK=1 python3 -m unittest discover -s tests -p 'test_*.py' -v
+
+      - name: 端到端冒烟（离线三流程）
+        run: python3 scripts/smoke_test.py --flow all --offline
